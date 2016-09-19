@@ -160,6 +160,7 @@ function scene:create( event )
 	-- Ajustes nos elementos do jogo.
 	function returnToMenu(event)
 		if(event.phase == "ended") then
+			composer.removeScene("gameplay")
 			composer.gotoScene("menu")
 		end
 	end
