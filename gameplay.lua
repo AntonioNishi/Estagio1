@@ -137,7 +137,7 @@ function scene:create( event )
 		top=0, 
 		left = _W - 160,
 		height=_H,
-		width = 160,
+		width = 205,
 		hideBackground = true, 
 		scrollWidth = 50 ,
 		scrollHeight = 1000 }
