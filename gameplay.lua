@@ -137,7 +137,7 @@ function scene:create( event )
 		top=0, 
 		left = _W - 160,
 		height=_H,
-		width = 205,
+		width = 160,
 		hideBackground = true, 
 		scrollWidth = 50 ,
 		scrollHeight = 1000 }
@@ -163,19 +163,20 @@ function scene:create( event )
 			composer.removeScene("gameplay")
 			composer.gotoScene("menu")
 		end
-	end
-
-	txt_gameComplete = display.newText("Quebra-Cabeça Terminado!!",0,0,120,100,native.systemFont,22)
+	end	
+		
+	txt_gameComplete = display.newImageRect("over.png",120,73)
 	txt_gameComplete.x, txt_gameComplete.y = 400, _H/2 - 50
 	fimJogoGroup:insert(txt_gameComplete)
-
-	txt_return = display.newText("Retorne ao Menu",0,0,120,100,native.systemFont,22)
+		
+	txt_return = display.newImageRect("restart.png",120, 73)
 	txt_return.x, txt_return.y = 400, _H/2 + 50
 	txt_return:addEventListener("touch", returnToMenu)
 	fimJogoGroup:insert(txt_return)
-
+	
 	baseBG = display.newImageRect("puzzle-base.png", puzzleLargura, puzzleAltura)
 	baseBG.x, baseBG.y = 160, _H/2
+	baseBG:toBack()
 	fimJogoGroup:insert(baseBG)
 
 	sceneGroup:insert(fimJogoGroup)
