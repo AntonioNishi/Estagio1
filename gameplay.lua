@@ -164,6 +164,11 @@ function scene:create( event )
 			composer.gotoScene("menu")
 		end
 	end	
+	
+	woodBoard = display.newImageRect("woodboard.png", 480, 320)
+		woodBoard.x = 562
+		woodBoard.y = _H/2
+		woodBoard:toBack();
 		
 	txt_gameComplete = display.newImageRect("over.png",120,73)
 	txt_gameComplete.x, txt_gameComplete.y = 400, _H/2 - 50
